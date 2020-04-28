@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 
 use App\Models\Task;
-use Illuminate\Database\Capsule\Manager as DB;
 use League\Plates\Engine;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -66,7 +65,6 @@ class TaskController
             $name = $request->get('name');
             $email = $request->get('email');
             $text = $request->get('text');
-
 
             if (empty($name)) {
                 $errors[] = 'Укажите имя пользователя';

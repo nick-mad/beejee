@@ -11,7 +11,7 @@ class LoginController
     public function loginForm(Engine $template)
     {
         if (user_is_logged()) {
-            redirect('/admin');
+            redirect('/');
         }
 
         $html = $template->render(
