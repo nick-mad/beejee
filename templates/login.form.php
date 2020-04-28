@@ -2,7 +2,7 @@
 <div class="container">
     <div class="col-sm-4 col-sm-offset-4">
         <?php if (isset($error)): ?>
-            <div class="alert alert-danger"><strong>Ошибка:</strong><br/><?php $this->escape($error); ?></div>
+            <div class="alert alert-danger"><strong>Ошибка:</strong><br/><?= $this->escape($error); ?></div>
         <?php endif; ?>
         <div class="panel panel-primary panel-login">
             <div class="panel-heading"><h3 class="panel-title"><strong>Авторизация</strong></h3></div>
