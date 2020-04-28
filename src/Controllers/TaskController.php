@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-
 use App\Models\Task;
 use League\Plates\Engine;
 use Symfony\Component\HttpFoundation\Request;
