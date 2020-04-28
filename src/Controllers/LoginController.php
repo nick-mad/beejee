@@ -28,15 +28,15 @@ class LoginController
         }
 
         $request = Request::createFromGlobals();
-        $login = $request->get('login');
-        $password = $request->get('password');
+        $login = $request->get('login', '');
+        $password = $request->get('password', '');
 
         $error = [];
 
         if ($login === 'admin' && $password === '123') {
             $_SESSION['logged_user'] = true;
             redirect('/');
-        } elseif ($login === null || $password === null) {
+        } elseif ($login === '' || $password === '') {
             $error = 'Поля логина и пароля обязательны для заполнения';
         } else {
             $error = 'Логин или пароль неверны';
