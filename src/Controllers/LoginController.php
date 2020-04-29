@@ -50,7 +50,6 @@ class LoginController
     public function logout()
     {
         unset($_SESSION['logged_user']);
-        setcookie('rememberme', '', time() - 3600, '/');
         session_destroy();
         redirect('/');
     }

@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="">
+        <div class="col-md-12">
             <?php if (!empty($message)): ?>
                 <div class="alert alert-success"><?= $this->escape($message) ?></div>
             <?php endif; ?>
